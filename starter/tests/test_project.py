@@ -6,7 +6,6 @@ from main import app
 # Instantiate the testing client with our app.
 client = TestClient(app)
 
-
 def test_get_root():
     """ Test the root page get a succesful response"""
     r = client.get("/")
