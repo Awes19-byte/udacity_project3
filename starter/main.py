@@ -95,9 +95,9 @@ class ModelInput(BaseModel):
 
 
 # Load artifacts
-model = joblib.load("/home/omahfoudhi/PycharmProjects/pythonProject2/udacity_project3/starter/starter/model.pkl")
-encoder = joblib.load("/home/omahfoudhi/PycharmProjects/pythonProject2/udacity_project3/starter/starter/encoder.pkl")
-lb = joblib.load("/home/omahfoudhi/PycharmProjects/pythonProject2/udacity_project3/starter/starter/lb.pkl")
+model = joblib.load("starter/starter/model.pkl")
+encoder = joblib.load("starter/starter/encoder.pkl")
+lb = joblib.load("starter/starter/lb.pkl")
 
 
 # Root path
