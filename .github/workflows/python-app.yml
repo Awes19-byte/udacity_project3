@@ -36,4 +36,18 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python starter/sanitycheck.py
+        pytest starter/tests/*.py
+
+  deploy:
+
+    runs-on: ubuntu-latest
+    needs: [build]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Render
+        uses: Awes19/render-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{https://api.render.com/deploy/srv-ckvt2qbamefc73bjqmk0?key=ZhRi3SkKWIE}}
+          heroku_app_name: udac
+          heroku_email: ${{oussamamahfoudhi1999@gmail.com}}
