@@ -36,7 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python starter/sanity_check.py
+        python starter/sanitycheck.py
     - name: Deploy
       run: |
         curl https://api.render.com/deploy/srv-ckvt2qbamefc73bjqmk0?key=ZhRi3SkKWIE
