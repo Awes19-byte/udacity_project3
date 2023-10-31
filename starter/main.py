@@ -95,9 +95,9 @@ class ModelInput(BaseModel):
 
 
 # Load artifacts
-model = joblib.load("starter/model.pkl")
-encoder = joblib.load("starter/encoder.pkl")
-lb = joblib.load("starter/lb.pkl")
+model = joblib.load(r"starter/starter/model.pkl")
+encoder = joblib.load(r"starter/starter/encoder.pkl")
+lb = joblib.load(r"starter/starter/lb.pkl")
 
 
 # Root path
