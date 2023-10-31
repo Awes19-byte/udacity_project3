@@ -13,7 +13,7 @@ from starter.ml.data import process_data
 import os
 # Create app
 app = FastAPI()
-os = os.getcwd()
+current = os.getcwd()
 # POST Input Schema
 
 
@@ -93,11 +93,14 @@ class ModelInput(BaseModel):
             }
         }
 
-
+if current.endswith("starter"):
+    current = current + "/"
+else:
+    current = current + "/starter/"
 # Load artifacts
-model = joblib.load(r"starter/model.pkl")
-encoder = joblib.load(r"starter/encoder.pkl")
-lb = joblib.load(r"starter/lb.pkl")
+model = joblib.load(current + "starter/model.pkl")
+encoder = joblib.load(current + "starter/encoder.pkl")
+lb = joblib.load(current + "starter/lb.pkl")
 
 
 # Root path
