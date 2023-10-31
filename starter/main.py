@@ -10,10 +10,10 @@ import uvicorn
 from pydantic import BaseModel
 from starter.ml.model import inference
 from starter.ml.data import process_data
-
+import os
 # Create app
 app = FastAPI()
-
+os = os.getcwd()
 # POST Input Schema
 
 
@@ -95,9 +95,9 @@ class ModelInput(BaseModel):
 
 
 # Load artifacts
-model = joblib.load(r"starter/starter/model.pkl")
-encoder = joblib.load(r"starter/starter/encoder.pkl")
-lb = joblib.load(r"starter/starter/lb.pkl")
+model = joblib.load(r"starter/model.pkl")
+encoder = joblib.load(r"starter/encoder.pkl")
+lb = joblib.load(r"starter/lb.pkl")
 
 
 # Root path
